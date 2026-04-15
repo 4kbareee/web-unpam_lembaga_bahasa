@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // CloseF mobile menu on link click
-    const navLinksList = document.querySelectorAll('.nav-links a');
+    // Close mobile menu on link click (Exclude dropdown toggles)
+    const navLinksList = document.querySelectorAll('.nav-links a:not(.nav-dropdown > a)');
     navLinksList.forEach(link => {
         link.addEventListener('click', () => {
             if (navLinks && navLinks.classList.contains('active')) {
